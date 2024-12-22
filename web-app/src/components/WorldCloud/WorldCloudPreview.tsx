@@ -15,7 +15,7 @@ const WorldCloudPreview = ({ words }: IWorldCloudPreviewProps) => {
         <Typography.Paragraph className="text-gray-900 text-lg font-medium">
           Word Cloud
         </Typography.Paragraph>
-        <div className="h-[calc(80vh_-_100px)] w-[80%] flex items-center justify-center">
+        <div className="mx-auto h-[calc(80vh_-_100px)] w-[80%] flex items-center justify-center">
           <WordCloud
             words={words}
             options={{

@@ -15,3 +15,17 @@ body {
     'Noto Sans',
     sans-serif;
 }
+
+.ant-btn {
+  padding: 20px ;
+}
+.ant-btn-primary {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+}
