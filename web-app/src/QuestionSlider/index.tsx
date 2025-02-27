@@ -70,8 +70,8 @@ const QuestionSlider: React.FC<QuestionSliderProps> = ({ questions }) => {
       <div className="p-5 flex flex-1 items-center justify-end">
         <div className="w-full h-[80vh] rounded-xl border border-gray-300 bg-white-base p-5 ">
           <div style={{ height: '400px' }}>
-            {/* <Bar data={chartData} options={chartOptions} /> */}
-            {answers.map((q) => (
+            <Bar data={chartData} options={chartOptions} />
+            {/* {answers.map((q) => (
               <div className="mt-10">
                 {q.value}
                 <RangeSlider
@@ -83,7 +83,7 @@ const QuestionSlider: React.FC<QuestionSliderProps> = ({ questions }) => {
                   // value={q.value}
                 />
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
         <div className="flex-2 p-5">

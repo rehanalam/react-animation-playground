@@ -10,6 +10,7 @@ import Dashboard from './components/Dashboard';
 import WordCloudApp from './components/WorldCloud';
 import QuestionSlider from './QuestionSlider';
 import QuestionAnswer from './components/QuestionAnswer';
+import ChartsSample from './components/ChartsSample';
 
 function App() {
   // const {data, isLoading} = useGetFredCategoryQuery(undefined,{refetchOnMountOrArgChange: true});
@@ -27,9 +28,11 @@ function App() {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistedStore}>
           <div className="font-sans bg-gray-50">
+            <ChartsSample/>
             <QuestionAnswer />
-            <QuestionSlider questions={questions} />
+            {/* <QuestionSlider questions={questions} /> */}
             <WordCloudApp />
+
           </div>
           {/* <Dashboard /> */}
         </PersistGate>

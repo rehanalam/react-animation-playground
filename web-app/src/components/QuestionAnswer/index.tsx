@@ -4,7 +4,13 @@ import { Typography } from 'antd';
 import { useState } from 'react';
 import QuestionAnswerForm from './QuestionAnswerForm';
 
-const questionsInit: string[] = [];
+const questionsInit: string[] = [
+  "What does a typical day at your company look like?",
+  "How does the company support work-life balance?",
+  "What initiatives are in place for employee growth and development?",
+  "How does the company promote diversity and inclusion?",
+  "What are the core values that shape your work culture?"
+];
 
 const ARROW_BG =
   'flex items-center justify-center w-[40px] h-[40px] bg-gray-100 rounded-full cursor-pointer ';
@@ -63,17 +69,17 @@ const QuestionAnswer = () => {
     if (e.key === 'Enter' && questions.length > 0) {
       setAnswered(true); 
 
-      const updatedQuestions = [...questions];
-      updatedQuestions.splice(count, 1);
-     
-      setQuestions(updatedQuestions);
-
       setTimeout(() => {
+        const updatedQuestions = [...questions];
+        updatedQuestions.splice(count, 1);
+        setQuestions(updatedQuestions);
+  
         if(updatedQuestions.length === 1) {
           setCount(0);
           setReverse(false);
+        } else {
+          nextSlide();
         }
-        nextSlide();
         setAnswered(false); 
       }, 1000);
     }
@@ -81,7 +87,6 @@ const QuestionAnswer = () => {
 
   return (
     <>
-    {JSON.stringify(questions)}
     <div
       className="flex h-screen w-[80%] items-center justify-center mx-auto">
       <div className="p-5 flex flex-1 items-center justify-end" onKeyDown={handleKeyDown} tabIndex={0}>

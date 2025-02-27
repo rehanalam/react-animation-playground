@@ -11,7 +11,7 @@ export default defineConfig(() => ({
 
   // for dev
   server: {
-    port: 4000,
+    port: 5000,
     strictPort: true,
     // TODO: Causing issue while loading assets using alias
     // origin: 'http://0.0.0.0:4000',

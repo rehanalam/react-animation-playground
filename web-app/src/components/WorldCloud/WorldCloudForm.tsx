@@ -23,7 +23,7 @@ const WorldCloudForm = ({ onAddWord }: IWorldCloudFormProps) => {
         <Form
           layout="inline"
           onFinish={onFinish}
-          className="flex justify-between"
+          className="flex justify-between "
         >
           <Form.Item
             name="word"
@@ -34,6 +34,7 @@ const WorldCloudForm = ({ onAddWord }: IWorldCloudFormProps) => {
               value={newWord}
               onChange={(e) => setNewWord(e.target.value)}
               placeholder="Type a word..."
+              className='py-[10px]'
             />
           </Form.Item>
           <Form.Item>
